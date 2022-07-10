@@ -1,5 +1,10 @@
 # whatTheDuckIsThis
 
+<p align="center">
+  <img src="./images/duckscript.png" alt="WHAT THE DUCK"/>
+</p>
+
+
 ## “If it walks like a duck, and it quacks like a duck, then it must be a duck.”
 Js is a beautiful language. However, growing up it made some interesting decisions in its life regarding how it wanted to behave and what it could do. As a result the developer has a large amount of options in how they are able to handle the idiosyncrasies of the language. Fundamentally however, js was designed as a prototypical dynamic functional language as a result I believe that writing code which takes advantage of that is the ideal way to write. That being said, things such as class syntax has been added in which allows for syntax that matches the standard of programming although fundamentally the code compiles into prototype based objects.
 
