@@ -16,5 +16,7 @@ You gotta be a good bit full of yourself to think that you are worthy of writing
 
 Furthermore, just because things are done a certain way doesn't mean that there is not a better way. As a result, I would absolutely adore input and critiques of what I've gathered as an up and coming developer who simply loves talking about code.
 
+Just because I say one thing doesn't mean that way should be followed to the T. Have some imagination and think out of the box. That's what's js is good at.
+
 Although this book is outdated I recommend it as it will cause you to question everything thus forcing you to have defined opinions about js topics:
 https://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford/dp/0596517742
