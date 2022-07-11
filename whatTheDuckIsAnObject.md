@@ -31,6 +31,9 @@ class ClassName {
        //7
        help(this);
    }
+   
+   //6
+   #help(arguments) {}
 }
  
 //4
@@ -40,9 +43,6 @@ ClassName.staticMethod = function() {}
 ClassName.validateField1 = function() {
    return true;
 }
- 
-//6
-function help(arguments) {}
 ```
  
 #### comments
@@ -56,7 +56,7 @@ function help(arguments) {}
  
 5. input validation should not be done with setters and getters. It occurs often enough that you have edge cases in which you might want to do something slightly out of the ordinary. Like leaving a field undefined.
  
-6. helpers should be declared as functions at the bottom of the page. This keeps the scope of "this” if a method is passed from one object to another from struggling as it wont demand this functionality exist on every object arguments can be handled
+6. Helpers should be declared as private methods. This keeps them from being visible to the outside and maintains this "scope". The only thing it does poorly is keep methods being reattached. However, if you plan on making a function that is passed around between objects it should not be a method.
  
 7. passing in "this" as an argument allows functions to not be dependent on the "this" keyword, just the props attached. there are other ways of handling "this" as well.
  
@@ -64,9 +64,7 @@ function help(arguments) {}
 notice here how this format allows for a few things. The first is clarity in what the object is. the second is that at a glance we are able to quickly tell what the object contains. Object type at the top, private fields, fields, then core functionality. Nothing is hidden behind confusing setters, getters or private methods. It allows for easy debugging and encourages more functional programming which has less “hard to fix bugs” imo.
  
 #### argument points
-There are two big argument points that I lose sleep over. The first of which is the best way to handle private helpers. There are many ways to do it but they often either obfuscate the code or remove functionality. I felt this one allowed for the most benefits. although it's a bit annoying to have the function
- 
-The second one is handling input validation. I feel that requirements for classes change so often that adding constraints tends to hurt you more later down the road. As a result, having validation statistics allows the user to call those functions anytime they are getting input from the user and when they are returning it to the backend. I don't think it really matters how classes are used within the js code. It's just the entry and exit points that validation is needed.
+I feel that requirements for classes change so often that adding constraints tends to hurt you more later down the road. As a result, having validation statistics allows the user to call those functions anytime they are getting input from the user and when they are returning it to the backend. I don't think it really matters how classes are used within the js code. It's just the entry and exit points that validation is needed.
  
 ### pro gamer tips
 - you might want to add an Object.prototype for removing the sudo private identifier for when you are printing the obj or saving it to a database.
